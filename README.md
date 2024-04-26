@@ -10,5 +10,5 @@
 та
 
 <h3> Технологии </h3>
-<a href="https://www.pygame.org/"> pygame 2.1.2 </a>
+<a href="https://www.pygame.org/"> pygame 2.1.2 </a> <br/>
 <a href="python.org"> Python 3.10.4 </a>
