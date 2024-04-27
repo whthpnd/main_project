@@ -16,6 +16,9 @@ left_rapidity = -5
 right_rapidity = 5
 up_rapidity = -9
 
+#дефолт значения для врагов
+speed_enemy = 5
+
 # кол-во кадров
 FPS = 60
 
@@ -30,3 +33,7 @@ RED = (255, 0, 0)
 GREEN = (0, 255, 0)
 GOLD = (255, 215, 0)
 BLACK = (0, 0, 0)
+
+#границы карты
+map_width = 2000
+map_height = 2000

@@ -7,6 +7,7 @@ from . import objects as obj
 
 #импорт модуля
 import time
+import pygame
 
 # функция для отрисовки камеры
 def camera_func(camera, target_rect):
@@ -50,16 +51,18 @@ def check_collision_enemies(object, enemies_list):
 
 
 # проверка
-def check_collision_collectibles(object):
-    # если object касается collictible
-    for collectible in obj.collectibles_list:
-        if object.rect.colliderect(collectible.rect):
-            # убираем этот объект из всех групп
-            collectible.kill()
-            # убираем этот объект из списка (чтобы не было проверки коллизии)
-            obj.collectibles_list.remove(collectible)
-            # прибавляем одно очко
-            c.score += 1
+
+
+def draw_objects(camera_x, camera_y):
+    # Очистка экрана
+    obj.screen.fill((0, 0, 0))
+    
+    # Рисование объектов на экране с учетом позиции камеры
+    player_rect = pygame.Rect(obj.player.x - camera_x, obj.player.y - camera_y, 50, 50)
+    pygame.draw.rect(obj.screen, (255, 255, 255), player_rect)
+    
+    # Обновление экрана
+    pygame.display.update()
 
 
 # восприятие персонажа на локацию

@@ -27,23 +27,27 @@ score_text = font.render("Счёт: 0", True, c.BLACK)  # выбор цвета 
 score_rect = score_text.get_rect()  # создание хитбокса текста
 score_rect.topleft = (c.WIDTH // 2, 100)  # расположение хитбокса\текста на экране
 
+player_x = c.map_width // 2
+player_y = c.map_height // 2
+
 # создаем групп спрайтов
 player_and_platforms = pygame.sprite.Group()
 enemies = pygame.sprite.Group()
-collectibles = pygame.sprite.Group()
+
+entityes = []
 
 # в трех циклах добавляем объекты в соответствующие группы
 for i in obj.enemies_list:
     enemies.add(i)
+    entityes.append(i)
 
 for i in obj.platforms_list:
     player_and_platforms.add(i)
-
-for i in obj.collectibles_list:
-    collectibles.add(i)
+    entityes.append(i)
 
 # отдельно добавляем игрока
 player_and_platforms.add(obj.player)
+entityes.append(obj.player)
 
 # игровой цикл
 c.running = True
@@ -52,7 +56,10 @@ while c.running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             c.running = False
-
+     # Очистка экрана
+    obj.screen.fill((255, 255, 255))
+    # Обновление счета на экране
+    obj.screen.blit(score_text, score_rect)
     # проверяем нажатие на клавиши для перемещения
     keys = pygame.key.get_pressed()
     obj.player.x_velocity = 0
@@ -86,22 +93,21 @@ while c.running:
     obj.player.update()
     enemies.update()
 
-    # отрисовываем фон, платформы, врагов и собираемые предметы
-    obj.screen.fill(c.WHITE)
+    player_x = obj.player.x
+    player_y = obj.player.y
     player_and_platforms.draw(obj.screen)
     enemies.draw(obj.screen)
-    collectibles.draw(obj.screen)
 
     # проверяем все возможные коллизии
     func.check_collision_platforms(obj.player, obj.platforms_list)
     func.check_collision_enemies(obj.player, obj.enemies_list)
-    func.check_collision_collectibles(obj.player)
 
     # обновление счёта на экране
     score_text = font.render("Счёт: " + str(c.score), True, c.BLACK)
-    obj.screen.blit(score_text, score_rect)
 
-    # обновление экрана и установка частоты кадров
+    # Обновление позиции камеры
+    
+    # Отрисовка объектов на экране с учетом позиции камеры
     pygame.display.update()
     clock.tick(c.FPS)
 
