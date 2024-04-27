@@ -1,7 +1,7 @@
 ﻿<h1 align="center"> Привет!
 <img src="https://github.com/blackcater/blackcater/raw/main/images/Hi.gif" height="32"/></h1>
 
-<h3 align = "center"> Здесь вы сможете прочитать о нашем проекте! </h3>
+<h3 align = "center"> Мы - лобненцы и это наш проект! </h3>
 
 <h3> Название игры! </h3>
 Сюжет нашей игры очень интересен, он будет проходить вон там.
@@ -11,13 +11,13 @@
 
 <h3> Запуск </h3>
 Для запуска игры вам необходимо: <br/>
-1. Установить <a href="python.org"> Python </a> <br/>
-2. Установить <a href="pygame.org"> pygame </a> <br/>
+1. Установить <a href="https://www.python.org"> Python </a> <br/>
+2. Установить <a href="https://www.pygame.org/"> pygame </a> <br/>
 3. Запустить файл main.py
 
 <h3> Технологии </h3>
+<a href="https://www.python.org"> Python 3.10.4 </a> <br/>
 <a href="https://www.pygame.org/"> pygame 2.1.2 </a> <br/>
-<a href="python.org"> Python 3.10.4 </a>
 
 <h3> Использование </h3>
 <h4> Директории </h4>
@@ -32,6 +32,4 @@
 <i> src/functions.py </i> - файл, предназначенный для хранения функций. <br/>
 <i> src/objects.py </i> - файл, предназначенный для хранения объектов.
 
-<h3> Контактная информация </h3>
-
-<img src="https://github.com/whthpnd/main_project/assets/168218805/55dc8e09-ad8e-415a-9529-7454a71e916d" width="15" height="15"> @whthpnddd </img>
+﻿<h1 align="center"> ENJOY! </h1>
