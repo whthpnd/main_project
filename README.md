@@ -35,4 +35,4 @@
 <h3> Контактная информация </h3>
 
 
-(https://github.com/whthpnd/main_project/raw/master/assets/image.png) @whthpnddd
+(https://github.com/whthpnd/main_project/raw/main/assets/image.png) @whthpnddd
