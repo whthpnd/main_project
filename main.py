@@ -49,9 +49,10 @@ for i in obj.platforms_list:
 player_and_platforms.add(obj.player)
 entityes.append(obj.player)
 
+rect = pygame.Rect(200, 600, 100, 100)
+
 # игровой цикл
 c.running = True
-
 while c.running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -63,13 +64,18 @@ while c.running:
     # проверяем нажатие на клавиши для перемещения
     keys = pygame.key.get_pressed()
     obj.player.x_velocity = 0
-    if keys[pygame.K_LEFT]:
-        func.location_effect(c.location)
-        obj.player.x_velocity = c.left_rapidity
+    # if keys[pygame.K_LEFT]:
+    #     func.location_effect(c.location)
+    #     obj.player.x_velocity = c.left_rapidity
 
-    if keys[pygame.K_RIGHT]:
-        func.location_effect(c.location)
-        obj.player.x_velocity = c.right_rapidity
+    # if keys[pygame.K_RIGHT]:
+    #     func.location_effect(c.location)
+    #     obj.player.x_velocity = c.right_rapidity
+
+    for e in obj.platforms_list:
+        obj.camera.update_x(e)
+    for e in obj.enemies_list:
+        obj.camera.update_x(e)
 
     if keys[pygame.K_a]:
         func.location_effect(c.location)
@@ -87,7 +93,7 @@ while c.running:
         func.change_location(-1)
 
     # гравитация для игрока
-    obj.player.y_velocity += 0.5
+    obj.player.y_velocity += 0.3
 
     # обновляем значения атрибутов игрока и врагов
     obj.player.update()
@@ -97,14 +103,14 @@ while c.running:
     player_y = obj.player.y
     player_and_platforms.draw(obj.screen)
     enemies.draw(obj.screen)
-
+    pygame.draw.rect(obj.screen, c.RED, rect)
+    func.move_object_when_near(obj.player, rect, 78, 60)
+    
     # проверяем все возможные коллизии
     func.check_collision_platforms(obj.player, obj.platforms_list)
     func.check_collision_enemies(obj.player, obj.enemies_list)
-
-    # обновление счёта на экране
-    score_text = font.render("Счёт: " + str(c.score), True, c.BLACK)
-
+    func.check_collision_object_with_rect(obj.player, rect)
+    
     # Обновление позиции камеры
     
     # Отрисовка объектов на экране с учетом позиции камеры

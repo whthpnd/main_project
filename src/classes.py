@@ -85,3 +85,15 @@ class Platform(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.rect.x = x
         self.rect.y = y
+
+class Camera:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+    def update_x(self, other_self):
+        keys = pygame.key.get_pressed()
+
+        if keys[pygame.K_RIGHT]:
+            other_self.rect.x -= c.right_rapidity
+        if keys[pygame.K_LEFT]:
+            other_self.rect.x -= c.left_rapidity

@@ -37,6 +37,33 @@ def check_collision_platforms(object, platform_list):
                 object.rect.left = platform.rect.right
 
 
+def check_collision_object_with_rect(object, rect):
+    # Проверяем коллизию между объектом и прямоугольником
+    if object.rect.colliderect(rect):
+        # Проверяем, находится ли объект над прямоугольником
+        if object.rect.bottom <= rect.top + abs(object.y_velocity):
+            # Если объект падает
+            if object.y_velocity > 0:
+                # Устанавливаем его над прямоугольником и сбрасываем скорость по оси Y
+                object.rect.bottom = rect.top
+                object.y_velocity = 0
+                object.on_ground = True
+        # Если объект находится под прямоугольником, выполняем стандартную обработку коллизии
+        else:
+            # Если объект движется вверх
+            if object.y_velocity < 0:
+                # Устанавливаем его под прямоугольником и сбрасываем скорость по оси Y
+                object.rect.top = rect.bottom
+                object.y_velocity = 0
+            # Если объект движется вправо
+            elif object.x_velocity > 0:
+                # Устанавливаем его слева от прямоугольника
+                object.rect.right = rect.left
+            # Если объект движется влево
+            elif object.x_velocity < 0:
+                # Устанавливаем его справа от прямоугольника
+                object.rect.left = rect.right
+
 # функция проверки коллизии выбранного объекта с объектами Enemies
 def check_collision_enemies(object, enemies_list):
     # running делаем видимой внутри функции чтобы было возможно
@@ -136,3 +163,10 @@ def start_cutscene(location):
         while time.monotonic() - start_time <= duration:
             # далее подмена bg, окружения и прочего...
             pass
+
+def move_object_when_near(player, object_to_move, distance_threshold_x, distance_threshold_y):
+    # Проверяем, находится ли центр игрока в пределах области прямоугольника по горизонтали и вертикали
+    if (abs(player.rect.centerx - object_to_move.centerx) < distance_threshold_x and
+            abs(player.rect.centery - object_to_move.centery) < distance_threshold_y):
+        # Перемещаем объект вместе с игроком
+        object_to_move.x += player.x_velocity
