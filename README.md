@@ -35,4 +35,4 @@
 <h3> Контактная информация </h3>
 
 
-<img src="https://github.com/whthpnd/main_project/assets/168218805/497194e1-cf44-43a5-b927-ffc0c950518e" width="14" height="14"> </img> @whthpndd
+<img src="https://github.com/whthpnd/main_project/assets/168218805/497194e1-cf44-43a5-b927-ffc0c950518e" width="15" height="15"> </img> @whthpndd
