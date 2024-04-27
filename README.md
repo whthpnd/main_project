@@ -31,3 +31,8 @@
 <i> src/constants.py </i> - файл, предназначенный для хранения некоторых значений и переменных. <br/>
 <i> src/functions.py </i> - файл, предназначенный для хранения функций. <br/>
 <i> src/objects.py </i> - файл, предназначенный для хранения объектов.
+
+<h3> Контактная информация </h3>
+
+
+<img src="https://icons8.ru/icon/9R1sV3QvY18K/telegram" height="24"> @whthpnddd
