@@ -11,8 +11,8 @@
 
 <h3> Запуск </h3>
 Для запуска игры вам необходимо:
-1. Установить <a href="python.org"> Python </a>
-2. Установить <a href="pygame.org"> pygame </a>
+1. Установить <a href="python.org"> Python </a> <br/>
+2. Установить <a href="pygame.org"> pygame </a> <br/>
 3. Запустить файл main.py
 
 <h3> Технологии </h3>
