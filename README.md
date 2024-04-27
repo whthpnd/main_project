@@ -1,4 +1,4 @@
-﻿<h1 align="center"> Привет!
+﻿﻿<h1 align="center"> Привет!
 <img src="https://github.com/blackcater/blackcater/raw/main/images/Hi.gif" height="32"/></h1>
 
 <h3 align = "center"> Здесь вы сможете прочитать о нашем проекте! </h3>
@@ -34,5 +34,4 @@
 
 <h3> Контактная информация </h3>
 
-
-<img src="https://icons8.ru/icon/9R1sV3QvY18K/telegram" height="24"> @whthpnddd
+<a href="https://github.com/whthpnd/main_project/assets/168218805/55dc8e09-ad8e-415a-9529-7454a71e916d"> @whthpnddd </a>
