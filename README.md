@@ -16,8 +16,8 @@
 3. Запустить файл main.py
 
 <h3> Технологии </h3>
-<a href="https://www.pygame.org/"> pygame 2.1.2 </a> <br/>
 <a href="https://www.python.org"> Python 3.10.4 </a>
+<a href="https://www.pygame.org/"> pygame 2.1.2 </a> <br/>
 
 <h3> Использование </h3>
 <h4> Директории </h4>
