@@ -32,7 +32,7 @@
 <i> src/functions.py </i> - файл, предназначенный для хранения функций. <br/>
 <i> src/objects.py </i> - файл, предназначенный для хранения объектов.
 
-<h3> Контактная информация </h3>![Telegram-icon](https://github.com/whthpnd/main_project/assets/168218805/497194e1-cf44-43a5-b927-ffc0c950518e)
+<h3> Контактная информация </h3>
 
 
-<img src="https://github.com/whthpnd/main_project/assets/168218805/497194e1-cf44-43a5-b927-ffc0c950518e" width="15" height="15"> @whthpnddd </img>
+<img src="https://github.com/whthpnd/main_project/assets/168218805/497194e1-cf44-43a5-b927-ffc0c950518e" width="18" height="18"> @whthpnddd </img>
