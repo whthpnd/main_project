@@ -35,4 +35,4 @@
 <h3> Контактная информация </h3>
 
 
-<img src="https://icons8.ru/icon/9R1sV3QvY18K/telegram" height="24"> @whthpnddd
+(https://github.com/whthpnd/main_project/raw/master/assets/image.png) @whthpnddd
