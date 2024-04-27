@@ -34,4 +34,4 @@
 
 <h3> Контактная информация </h3>
 
-![telegram (2)](https://github.com/whthpnd/main_project/assets/168218805/55dc8e09-ad8e-415a-9529-7454a71e916d) @whthpnddd
+<img src="https://github.com/whthpnd/main_project/assets/168218805/55dc8e09-ad8e-415a-9529-7454a71e916d" width="20" height="20"> @whthpnddd </img>
