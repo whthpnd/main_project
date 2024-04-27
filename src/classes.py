@@ -6,6 +6,7 @@ import pygame
 import random
 #импорт соседнего файла
 from . import constants as c
+from . import objects as obj
 # класс для игрока
 
 class Entity(pygame.sprite.Sprite):
@@ -84,4 +85,4 @@ class Platform(pygame.sprite.Sprite):
         self.image.fill((0,255,0))  # цвет платформы
         self.rect = self.image.get_rect()
         self.rect.x = x
-        self.rect.y = y
+        self.rect.y = y 
